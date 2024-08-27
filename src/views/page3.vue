@@ -60,26 +60,26 @@
             </div>
             <div class="center-bottom">
                 <span class='title'><span class="title-text">模块二分析</span></span>
-                <span class="angle1"></span>
+                <!-- <span class="angle1"></span>
                 <span class="angle2"></span>
                 <span class="angle3"></span>
-                <span class="angle4"></span>
+                <span class="angle4"></span> -->
                 <Row class="bottom-radars">
-                    <Col span="6">
+                    <Col span="12">
                         <radar
                             id='bottom_1_1'
                             :data=data5
                             ref="chart1"
                         ></radar>
                     </Col>
-                    <Col span="6">
+                    <Col span="12">
                         <radar
                             id='bottom_1_2'
                             :data=data6
                             ref="chart2"
                         ></radar>
                     </Col>
-                    <Col span="6">
+                    <!-- <Col span="6">
                         <radar
                             id='bottom_1_3'
                             :data=data7
@@ -92,9 +92,9 @@
                             :data=data8
                             ref="chart4"
                         ></radar>
-                    </Col>
+                    </Col> -->
                 </Row>
-                <Row class="bottom-bars">
+                <!-- <Row class="bottom-bars">
                     <Col span="6">
                         <chart4
                             id="bottom_2_1"
@@ -123,7 +123,7 @@
                             ref="chart8"
                         ></chart4>
                     </Col>
-                </Row>
+                </Row> -->
             </div>
         </Col>
         <Col :span="7">
