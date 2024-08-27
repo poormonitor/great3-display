@@ -1,22 +1,6 @@
 <template>
     <div style="height:100%;">
         <div class="header">
-            <div class="selectRange">
-                <Menu mode="horizontal" @on-select="(name) =>$route.name !== name && $router.push(name)" :active-name="$route.name">
-                    <MenuItem name="page1">
-                        page1
-                    </MenuItem>
-                    <MenuItem name="page2">
-                        page2
-                    </MenuItem>
-                    <MenuItem name="page3">
-                        page3
-                    </MenuItem>
-<!--                    <MenuItem name="page4">-->
-<!--                        page4-->
-<!--                    </MenuItem>-->
-                </Menu>
-            </div>
             <div class="header-title">
                 大数据可视化平台
             </div>
