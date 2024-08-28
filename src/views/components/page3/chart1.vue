@@ -102,7 +102,8 @@ export default {
                         color: '#1F1E4E'
                     },
                     data: this.setTrenchData('b')
-                }, {
+                },
+                 {
                     type: 'bar',
                     barWidth:15,
                     z: 2,
@@ -122,7 +123,9 @@ export default {
                         }
                     },
                     data: this.setTrenchData('d')
-                }]
+                }
+            
+            ]
             };
             if (!this.myChart) this.myChart = this.$echarts(this.$el);
 

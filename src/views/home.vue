@@ -2,41 +2,11 @@
     <div style="height:100%;">
         <div class="header">
             <div class="header-title">
-                大数据可视化平台
+                四团三连学生信息展示大屏
             </div>
-            <div class="selectRange">
-                <Menu mode="horizontal" @on-select="handleSelect" :active-name="activeName">
-                    <MenuItem name="day">
-                        昨日
-                    </MenuItem>
-                    <MenuItem name="week">
-                        近一周
-                    </MenuItem>
-                    <MenuItem name="month">
-                        近一月
-                    </MenuItem>
-                    <Submenu name="4">
-                        <template slot="title">
-                            <Icon type="ios-settings-outline" size="24" color="#60C2D4"/>
-                        </template>
-                        <MenuItem name="filter">筛选</MenuItem>
-                    </Submenu>
 
-                </Menu>
-            </div>
         </div>
-        <Modal
-            v-model="modal"
-            title="选择时间"
-            :mask-closable="false"
-            @on-ok="getMonthBetween(startTime,endTime)"
-        >
-            <DatePicker @on-change="pickStartDate" :options="optionStart" type="date" placeholder="选择开始日期"
-                        style="width: 200px"></DatePicker>
-            <span style="padding:0 20px;color:#75deef">至</span>
-            <DatePicker @on-change="pickEndDate" :options="optionEnd" type="date" placeholder="选择结束日期"
-                        style="width: 200px"></DatePicker>
-        </Modal>
+
         <div class="page">
             <router-view v-if="flag" :selectRangeDate='selectRangeDate'></router-view>
         </div>
@@ -44,31 +14,28 @@
     </div>
 </template>
 
-<script>
-export default {
-    name: '',
-    data() {
-        return {
-            activeName: 'month',// 默认显示近一月
-            modal: false,
-            flag: false,
-            selectRangeDate: [],
-            startTime: '',
-            endTime: '',
-            optionStart: {
+<script setup>
+import { onMounted } from 'vue';
+
+var
+            activeName= 'month',// 默认显示近一月
+            modal= false,
+            flag= true,
+            selectRangeDate= [],
+            startTime= '',
+            endTime= '',
+            optionStart= {
                 disabledDate(date) { // 禁止选择今天之后的日期
                     return date && date.valueOf() > Date.now() - 86400000;
                 }
             },
-            optionEnd: {},
-            resizeFn: null
-        }
-    },
-    mounted() {
-        window.addEventListener('resize', this.resizeFn);
-        this.handleSelect(this.activeName); // 默认显示近一个月
-    },
-    methods: {
+            optionEnd= {},
+            resizeFn= null
+onMounted(()=>{
+    window.addEventListener('resize', this.resizeFn);
+    this.handleSelect(this.activeName); // 默认显示近一个月
+})
+    const i= {
         pickStartDate(date) { // 选择开始时间的回调
             this.startTime = date;
             this.optionEnd = {
@@ -132,8 +99,7 @@ export default {
             }
 
         }
-    },
-}
+    }
 </script>
 
 <style lang="less">
@@ -246,6 +212,7 @@ export default {
         color: #75deef;
         font-size: 30px;
         letter-spacing: 10px;
+        margin:0 auto;
     }
 
     .selectRange {
