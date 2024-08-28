@@ -1,6 +1,6 @@
 <template>
     <div class="ring">
-        <canvas :id="id"></canvas>
+        <!-- <canvas :id="id"></canvas> -->
     </div>
 </template>
 
