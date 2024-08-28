@@ -1,6 +1,7 @@
 <template>
-  <div style="    margin-top: 15px;margin-left: 5px;margin-right: 5px;display:block;">
-    <el-carousel indicator-position="outside" height="230px">
+  <div style="    margin-top: 50px;margin-left: 5px;margin-right: 5px;display:block;">
+
+    <el-carousel indicator-position="outside" height="310px">
       <el-carousel-item v-for="url in images" :key="item">
         <div style="margin: auto 0;">
         <el-image :src="url"  contain="fit"></el-image>

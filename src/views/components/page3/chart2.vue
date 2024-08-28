@@ -112,12 +112,12 @@ export default {
                     axisPointer: {            // 坐标轴指示器，坐标轴触发有效
                         type: 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
                     },
-                    formatter: "{b}:{c}"
+                    formatter: "{b}"
                 },
                 title: {
-                    text: '重点关注用户排名',
+                    text: '军训学员列表',
                     left: 0,
-                    top: 10,
+                    top: 0,
                     textStyle: {
                         fontSize: 12,
                         color: "#FFF"

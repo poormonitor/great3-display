@@ -2,7 +2,7 @@
     <div style="height:100%;">
         <div class="header">
             <div class="header-title">
-                四团三连学生信息展示大屏
+                四团三连学生信息智慧大屏
             </div>
 
         </div>
