@@ -115,9 +115,9 @@ export default {
                     formatter: "{b}:{c}"
                 },
                 title: {
-                    text: '军训学员列表',
+                    text: '重点关注用户排名',
                     left: 0,
-                    top: 0,
+                    top: 10,
                     textStyle: {
                         fontSize: 12,
                         color: "#FFF"
