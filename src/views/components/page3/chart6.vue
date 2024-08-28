@@ -11,12 +11,11 @@ export default {
         }
     },
     methods: {
-        // 设备安全性风险
         setDeviceSafe() {
             let option = {
                 title: [
                     {
-                        text: '重点用户关注排行',
+                        text: '稿件得分排行榜',
                         textStyle: {
                             color: "#fff",
                             fontSize: 12
@@ -25,7 +24,7 @@ export default {
                         left: '4%'
                     },
                     {
-                        text: "分类排行标题",
+                        text: "稿件类型统计",
                         textStyle: {
                             color: "#fff",
                             fontSize: 12
@@ -43,7 +42,7 @@ export default {
                 legend: {
                     data: [
                         {name: '人数', icon: 'circle'},
-                        {name: '金额', icon: 'circle'},
+                        {name: '得分', icon: 'circle'},
 
                     ],
                     gridIndex: 3,
@@ -99,7 +98,7 @@ export default {
                         fontSize: 10
                     },
                     axisTick: {show: false},
-                    data: ['分类1', '分类2', '分类3', '分类4'],
+                    data: ['通讯稿', '艺术稿', '代码作品', '其他'],
                     z: 10
                 },
                 radiusAxis: {
@@ -120,7 +119,7 @@ export default {
                 },
                 series: [
                     {
-                        name: '分类1',
+                        name: '通讯稿',
                         type: 'bar',
                         stack: '总量',
                         barWidth: 8,
@@ -136,7 +135,7 @@ export default {
                         data: [100, 90, 80, 70, 60, 50, 40, 30, 20, 15]
                     },
                     {
-                        name: '分类2',
+                        name: '艺术稿',
                         type: 'bar',
                         stack: '总量',
                         barWidth: 8,
@@ -151,7 +150,7 @@ export default {
                         data: [100, 90, 80, 70, 60, 50, 40, 30, 20, 15]
                     },
                     {
-                        name: '分类3',
+                        name: '代码作品',
                         type: 'bar',
                         stack: '总量',
                         barWidth: 8,
@@ -199,7 +198,7 @@ export default {
                         type: 'bar',
                         data: [1, 2, 3, 4],
                         coordinateSystem: 'polar',
-                        name: '金额',
+                        name: '得分',
                         itemStyle: {
                             color: '#0AB9FE'
                         },
@@ -244,6 +243,6 @@ export default {
 
 <style lang="less" scoped>
 .deviceSafeRisk {
-    height: 100%;
+    height: 90%;
 }
 </style>

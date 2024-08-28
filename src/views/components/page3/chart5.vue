@@ -1,5 +1,6 @@
 <template>
-    <div class="webcastsRisk"></div>
+    <!-- <div class="webcastsRisk"></div> -->
+     <div></div>
 </template>
 
 <script>

@@ -124,7 +124,7 @@
             </div>
         </Col>
         <Col :span="7">
-            <div class="right-1">
+            <!-- <div class="right-1">
                 <div class="right1-1">
                     <span class="title"
                         ><span class="title-text">模块三分析</span></span
@@ -135,24 +135,20 @@
                     <span class="angle4"></span>
                     <chart5 ref="webcastsRisk"></chart5>
                 </div>
-            </div>
+            </div> -->
             <div class="right-1">
                 <div class="right1-1">
-                    <span class="title"
-                        ><span class="title-text">模块四分析</span></span
-                    >
+                    <span class='title'><span class="title-text">稿件情况分析</span></span>
                     <span class="angle1"></span>
                     <span class="angle2"></span>
                     <span class="angle3"></span>
                     <span class="angle4"></span>
-                    <chart6 ref="deviceSafeRisk"></chart6>
+                    <chart6 ref='deviceSafeRisk'></chart6>
                 </div>
             </div>
             <div class="right-2">
                 <div class="right1-1">
-                    <span class="title"
-                        ><span class="title-text">模块五分析</span></span
-                    >
+                    <span class='title'><span class="title-text">模块五分析</span></span>
                     <span class="angle1"></span>
                     <span class="angle2"></span>
                     <span class="angle3"></span>
@@ -162,21 +158,21 @@
                             <div class="subtitle">标题1</div>
                             <div class="canvasList">
                                 <chart7
-                                    id="canvas_1"
+                                    id='canvas_1'
                                     title="分类1"
-                                    color="#00CCFF"
+                                    color='#00CCFF'
                                     ref="ring1"
                                 ></chart7>
                                 <chart7
-                                    id="canvas_2"
+                                    id='canvas_2'
                                     title="分类2"
-                                    color="#EDCE43"
+                                    color='#EDCE43'
                                     ref="ring2"
                                 ></chart7>
                                 <chart7
-                                    id="canvas_3"
+                                    id='canvas_3'
                                     title="分类3"
-                                    color="#F83552"
+                                    color='#F83552'
                                     ref="ring3"
                                 ></chart7>
                             </div>
@@ -190,17 +186,17 @@
 </template>
 
 <script>
-const chinaMap = () => import("./components/page3/chinaMap");
-const pie = () => import("./components/pie");
-const radar = () => import("./components/radar");
-const chart1 = () => import("./components/page3/chart1");
-const chart2 = () => import("./components/page3/chart2");
-const chart3 = () => import("./components/page3/chart3");
-const chart4 = () => import("./components/page3/chart4");
-const chart5 = () => import("./components/page3/chart5");
-const chart6 = () => import("./components/page3/chart6");
-const chart7 = () => import("./components/page3/chart7");
-const chart8 = () => import("./components/page3/chart8");
+const chinaMap  = () => import('./components/page3/chinaMap');
+const pie = ()=> import('./components/pie');
+const radar = ()=> import('./components/radar');
+const chart1 = ()=> import('./components/page3/chart1');
+const chart2 = ()=> import('./components/page3/chart2');
+const chart3 = ()=>import('./components/page3/chart3');
+const chart4 = ()=> import('./components/page3/chart4');
+const chart5 = ()=> import('./components/page3/chart5');
+const chart6 = ()=> import('./components/page3/chart6');
+const chart7 = ()=> import('./components/page3/chart7');
+const chart8 =() => import('./components/page3/chart8');
 
 export default {
     name: "page3",
@@ -215,7 +211,7 @@ export default {
         chart5,
         chart6,
         chart7,
-        chart8,
+        chart8
     },
     data() {
         return {
@@ -866,15 +862,16 @@ export default {
     }
 
     .right-1 {
-        height: 30%;
+        height: 50%;
 
         .right1-1 {
-            height: 92%;
+            height: 90%;
         }
     }
 
     .right-2 {
         height: 40%;
+
     }
 }
 </style>
