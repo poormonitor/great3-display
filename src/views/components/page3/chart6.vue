@@ -132,7 +132,7 @@ export default {
 
                             position: 'insideRight'
                         },
-                        data: [100, 90, 80, 70, 60, 50, 40, 30, 20, 15]
+                        data: [9,8.9,8,7,7,5,3,2.5,1,0]
                     },
                     {
                         name: '艺术稿',
@@ -147,7 +147,7 @@ export default {
                             show: false,
                             position: 'insideRight'
                         },
-                        data: [100, 90, 80, 70, 60, 50, 40, 30, 20, 15]
+                        data: [8,8.1,7,7.2,5,5,4,2,1.2,1.1]
                     },
                     {
                         name: '代码作品',
@@ -162,7 +162,7 @@ export default {
                             show: false,
                             position: 'insideRight'
                         },
-                        data: [100, 90, 80, 70, 60, 50, 40, 30, 20, 15]
+                        data: [7,8.3,7.8,6.9,6.8,5,4,3.5,3,5]
                     },
                     {
                         name: '其他',
@@ -177,22 +177,7 @@ export default {
                             show: false,
                             position: 'insideRight'
                         },
-                        data: [100, 90, 80, 70, 60, 50, 40, 30, 20, 15]
-                    },
-                    {
-                        name: '其他',
-                        type: 'bar',
-                        barWidth: 8,
-                        stack: '总量',
-                        itemStyle: {
-                            color: '#A77BDE',
-                            borderRadius: [0, 8, 8, 0]
-                        },
-                        label: {
-                            show: false,
-                            position: 'insideRight'
-                        },
-                        data: [100, 90, 80, 70, 60, 50, 40, 30, 20, 15]
+                        data: [9,6,5.5,4.9,4.8,4.7,3,2.9,2.1,0.1]
                     },
                     {
                         type: 'bar',
