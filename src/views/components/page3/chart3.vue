@@ -1,10 +1,10 @@
 <template>
-    <div class="redPocket"></div>
+    <div class="training"></div>
 </template>
 
 <script>
 export default {
-    name: "redPocket",
+    name: "training",
     data() {
         return {
             myChart: null,
@@ -12,7 +12,7 @@ export default {
     },
     methods: {
         // 红包装账
-        setPocket() {
+        setTrain() {
             let option = {
                 tooltip: {
                     trigger: "axis",
@@ -110,13 +110,14 @@ export default {
         },
     },
     mounted() {
-        this.setPocket();
+        this.setTrain();
     },
 };
-</script>F
+</script>
+F
 
 <style lang="less" scoped>
-.redPocket {
-    height:90%;
+.training {
+    height: 90%;
 }
 </style>

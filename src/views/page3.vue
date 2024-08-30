@@ -1,10 +1,10 @@
 <template>
-   <Row class="page3">
+    <Row class="page3">
         <Col :span="7">
             <div class="left">
-                <span class="title"
-                    ><span class="title-text">出勤情况分析</span></span
-                >
+                <span class="title">
+                    <span class="title-text">出勤情况分析</span>
+                </span>
                 <span class="angle1"></span>
                 <span class="angle2"></span>
                 <span class="angle3"></span>
@@ -15,12 +15,12 @@
                             id="left_1"
                             title="表扬统计"
                             :data="data1"
-                            ref="channelBar1"
+                            ref="recommend1"
                         ></chart1>
                         <chart2
                             id="left_2"
                             :data="data2"
-                            ref="distributionSolider1"
+                            ref="recommend2"
                         ></chart2>
                     </div>
                 </div>
@@ -43,22 +43,18 @@
                     </div>
                 </div>
                 <div class="left1" style="height: 40%; padding-top: 3%">
-                    <chart3 class="maring: 40px" ref="redPocket"></chart3>
+                    <chart3 class="maring: 40px" ref="training"></chart3>
                 </div>
             </div>
         </Col>
         <Col :span="10" style="padding: 0 1%">
             <div class="center-top">
-                <china-map ref="chinaMap"></china-map>
+                <source-map ref="sourceMap"></source-map>
             </div>
             <div class="center-bottom">
-                <span class="title"
-                    ><span class="title-text">训练结果分析</span></span
-                >
-                <!-- <span class="angle1"></span>
-                <span class="angle2"></span>
-                <span class="angle3"></span>
-                <span class="angle4"></span> -->
+                <span class="title">
+                    <span class="title-text">训练结果分析</span>
+                </span>
                 <Row class="bottom-radars height-full">
                     <Col span="12" class="radar-col height-full">
                         <radar
@@ -70,83 +66,33 @@
                     </Col>
                     <Col span="12">
                         <radar
-                            id='bottom_1_2'
-                            :data=data6
+                            id="bottom_1_2"
+                            :data="data6"
                             ref="chart2"
                         ></radar>
                     </Col>
-                    <!-- <Col span="6">
-                        <radar
-                            id='bottom_1_3'
-                            :data=data7
-                            ref="chart3"
-                        ></radar>
-                    </Col>
-                    <Col span="6">
-                        <radar
-                            id='bottom_1_4'
-                            :data=data8
-                            ref="chart4"
-                        ></radar>
-                    </Col> -->
                 </Row>
-                <!-- <Row class="bottom-bars">
-                    <Col span="6">
-                        <chart4
-                            id="bottom_2_1"
-                            :data="data9"
-                            ref="chart5"
-                        ></chart4>
-                    </Col>
-                    <Col span="6">
-                        <chart4
-                            id="bottom_2_2"
-                            :data="data10"
-                            ref="chart6"
-                        ></chart4>
-                    </Col>
-                    <Col span="6">
-                        <chart4
-                            id="bottom_2_3"
-                            :data="data11"
-                            ref="chart7"
-                        ></chart4>
-                    </Col>
-                    <Col span="6">
-                        <chart4
-                            id="bottom_2_4"
-                            :data="data12"
-                            ref="chart8"
-                        ></chart4>
-                    </Col>
-                </Row> -->
             </div>
         </Col>
         <Col :span="7">
-            <!-- <div class="right-1">
-                <div class="right1-1">
-                    <span class='title'><span class="title-text">模块三分析</span></span>
-                    <span class="angle1"></span>
-                    <span class="angle2"></span>
-                    <span class="angle3"></span>
-                    <span class="angle4"></span>
-                    <chart5 ref='webcastsRisk'></chart5>
-                </div>
-            </div> -->
             <div class="right-1">
                 <div class="right1-1">
-                    <span class='title'><span class="title-text">稿件情况分析</span></span>
+                    <span class="title">
+                        <span class="title-text">稿件情况分析</span>
+                    </span>
                     <span class="angle1"></span>
                     <span class="angle2"></span>
                     <span class="angle3"></span>
                     <span class="angle4"></span>
-                    <chart6 ref='deviceSafeRisk'></chart6>
-                    <rollngscr></rollngscr>
+                    <chart4 ref="article1"></chart4>
+                    <rollingscr></rollingscr>
                 </div>
             </div>
             <div class="right-2">
                 <div class="right1-1">
-                    <span class='title'><span class="title-text">照片展示</span></span>
+                    <span class="title">
+                        <span class="title-text">照片展示</span>
+                    </span>
                     <span class="angle1"></span>
                     <span class="angle2"></span>
                     <span class="angle3"></span>
@@ -159,38 +105,31 @@
 </template>
 
 <script>
-const chinaMap  = () => import('./components/page3/chinaMap');
-const pie = ()=> import('./components/pie');
-const radar = ()=> import('./components/radar');
-const chart1 = ()=> import('./components/page3/chart1');
-const chart2 = ()=> import('./components/page3/chart2');
-const chart3 = ()=>import('./components/page3/chart3');
-const chart4 = ()=> import('./components/page3/chart4');
-const chart5 = ()=> import('./components/page3/chart5');
-const chart6 = ()=> import('./components/page3/chart6');
-const chart7 = ()=> import('./components/page3/chart7');
-const chart8 =() => import('./components/page3/chart8');
-const rollngscr=()=>import("./components/page3/rollingscr.vue")
-const casc=()=>import("./components/page3/cas.vue")
+const sourceMap = () => import("./components/page3/sourceMap");
+const pie = () => import("./components/pie");
+const radar = () => import("./components/radar");
+const chart1 = () => import("./components/page3/chart1");
+const chart2 = () => import("./components/page3/chart2");
+const chart3 = () => import("./components/page3/chart3");
+const chart4 = () => import("./components/page3/chart4");
+const rollingscr = () => import("./components/page3/rollingscr.vue");
+const casc = () => import("./components/page3/cas.vue");
 
 export default {
-    name: 'page3',
+    name: "page3",
     components: {
-        chinaMap,
+        sourceMap,
         chart1,
         chart2,
         pie,
         chart3,
         radar,
         chart4,
-        chart5,
-        chart6,
-        chart7,casc,
-        chart8,rollngscr
+        casc,
+        rollingscr,
     },
     data() {
         return {
-            //分析标题数据
             data1: [
                 {
                     subtitle: "45人次",
@@ -372,7 +311,6 @@ export default {
                     ],
                 },
             ],
-            // 模块二雷达图数据1
             data5: {
                 title: "队列优缺点",
                 position: ["5%", "14%"],
@@ -397,7 +335,6 @@ export default {
                     },
                 ],
             },
-            // 模块二雷达图数据2
             data6: {
                 title: "合唱优缺点",
                 position: ["5%", "14%"],
@@ -425,296 +362,29 @@ export default {
                     },
                 ],
             },
-            // 模块二雷达图数据3
-            data7: {
-                title: "雷达图数据3",
-                position: ["5%", "14%"],
-                center: ["50%", "60%"],
-                indicator: [
-                    { text: "分类1" },
-                    { text: "分类2" },
-                    { text: "分类3" },
-                    { text: "分类4" },
-                    { text: "分类5" },
-                    { text: "分类6" },
-                    { text: "分类7" },
-                    { text: "分类8" },
-                    { text: "分类9" },
-                    { text: "分类10" },
-                    { text: "分类11" },
-                    { text: "分类12" },
-                ],
-                data: [
-                    {
-                        name: "数值1",
-                        color: "#0096FE",
-                        value: [
-                            100, 8, 0.4, -80, 2000, 345, 123, 21, 34, 54, 431,
-                            876,
-                        ],
-                    },
-                    {
-                        name: "数值2",
-                        color: "#9EEAFF",
-                        value: [
-                            60, 5, 0.3, -100, 1500, 232, 78, 32, 567, 43, 765,
-                            432,
-                        ],
-                    },
-                ],
-            },
-            // 模块二雷达图数据4
-            data8: {
-                title: "雷达图数据4",
-                position: ["5%", "14%"],
-                center: ["50%", "60%"],
-                indicator: [
-                    { text: "分类1" },
-                    { text: "分类2" },
-                    { text: "分类3" },
-                    { text: "分类4" },
-                    { text: "分类5" },
-                    { text: "分类6" },
-                ],
-                data: [
-                    {
-                        name: "分类1",
-                        color: "#FD9800",
-                        value: [100, 8, 0.4, -80, 2000, 345],
-                    },
-                    {
-                        name: "分类2",
-                        color: "#FDC673",
-                        value: [60, 5, 0.3, -100, 1500, 232],
-                    },
-                ],
-            },
-            // 模块二柱图数据1
-            data9: {
-                title: "柱图数据1",
-                data: [
-                    {
-                        name: "人数",
-                        color: "#00CCFF",
-                        value: ["112", "212", "42", "232", "123", "67"],
-                    },
-                    {
-                        name: "次数",
-                        color: "#142AFE",
-                        value: ["112", "212", "42", "232", "123", "67"],
-                    },
-                ],
-            },
-            // 模块二柱图数据1
-            data10: {
-                title: "柱图数据2",
-                data: [
-                    {
-                        name: "个数",
-                        color: "#6514FF",
-                        value: ["112", "212", "42", "232", "123", "67"],
-                    },
-                    {
-                        name: "条数",
-                        color: "#B370FD",
-                        value: ["112", "212", "42", "232", "123", "67"],
-                    },
-                ],
-            },
-            data11: {
-                title: "柱图数据3",
-                data: [
-                    {
-                        name: "主动",
-                        color: "#05467D",
-                        value: ["112", "212", "42", "232", "123", "67"],
-                    },
-                    {
-                        name: "被动",
-                        color: "#52B8FF",
-                        value: ["112", "212", "42", "232", "123", "67"],
-                    },
-                ],
-            },
-            data12: {
-                title: "柱图数据4",
-                data: [
-                    {
-                        name: "个数",
-                        color: "#FD9800",
-                        value: ["112", "212", "42", "232", "123", "67"],
-                    },
-                    {
-                        name: "人数",
-                        color: "#FDC673",
-                        value: ["112", "212", "42", "232", "123", "67"],
-                    },
-                ],
-            },
-            pieData1: {
-                // 饼图数据1
-                title: "TOP数据1",
-                color: "#2C7BFE",
-
-                data: [
-                    {
-                        value: 60,
-                        name: "分类1",
-                        itemStyle: {
-                            color: "#1456FE",
-                        },
-                    },
-                    {
-                        value: 20,
-                        name: "分类2",
-                        itemStyle: {
-                            color: "#00CCFF",
-                        },
-                    },
-                    {
-                        value: 80,
-                        name: "分类3",
-                        itemStyle: {
-                            color: "#142AFE",
-                        },
-                    },
-                    {
-                        value: 40,
-                        name: "分类4",
-                        itemStyle: {
-                            color: "#1493FE",
-                        },
-                    },
-                    {
-                        value: 40,
-                        name: "分类5",
-                        itemStyle: {
-                            color: "#252448",
-                        },
-                    },
-                ],
-            },
-            pieData2: {
-                // 饼图数据1
-                title: "TOP数据2",
-                color: "#2C7BFE",
-
-                data: [
-                    {
-                        value: 60,
-                        name: "分类1",
-                        itemStyle: {
-                            color: "#142AFE",
-                        },
-                    },
-                    {
-                        value: 20,
-                        name: "分类2",
-                        itemStyle: {
-                            color: "#1493FE",
-                        },
-                    },
-                    {
-                        value: 80,
-                        name: "分类3",
-                        itemStyle: {
-                            color: "#252448",
-                        },
-                    },
-                    {
-                        value: 40,
-                        name: "分类4",
-                        itemStyle: {
-                            color: "#00CCFF",
-                        },
-                    },
-                    {
-                        value: 40,
-                        name: "分类5",
-                        itemStyle: {
-                            color: "#1456FE",
-                        },
-                    },
-                ],
-            },
-            pieData3: {
-                // 饼图数据1
-                title: "TOP数据3",
-                color: "#2C7BFE",
-
-                data: [
-                    {
-                        value: 60,
-                        name: "分类1",
-                        itemStyle: {
-                            color: "#1493FE",
-                        },
-                    },
-                    {
-                        value: 20,
-                        name: "分类2",
-                        itemStyle: {
-                            color: "#142AFE",
-                        },
-                    },
-                    {
-                        value: 80,
-                        name: "分类3",
-                        itemStyle: {
-                            color: "#1456FE",
-                        },
-                    },
-                    {
-                        value: 40,
-                        name: "分类4",
-                        itemStyle: {
-                            color: "#00CCFF",
-                        },
-                    },
-                    {
-                        value: 40,
-                        name: "分类5",
-                        itemStyle: {
-                            color: "#252448",
-                        },
-                    },
-                ],
-            },
             resizeFn: null,
         };
     },
     mounted() {
-        this.resizeFn = this.$debounce(()=> {
-            // 通过捕获系统的onresize事件触发我们需要执行的事件
-           this.$refs.channelBar1.setChart();
-           this.$refs.distributionSolider1.setChart();
-           this.$refs.channelBar2.setChart();
-           this.$refs.distributionSolider2.setChart();
-            //this.$refs.pies.setPies();
-           this.$refs.redPocket.setPocket();
-           this.$refs.webcastsRisk.setWebcasts();
-           this.$refs.deviceSafeRisk.setDeviceSafe();
-           this.$refs.ring1.drawRing();
-           this.$refs.ring2.drawRing();
-           this.$refs.ring3.drawRing();
+        this.resizeFn = this.$debounce(() => {
+            this.$refs.recommend1.setChart();
+            this.$refs.recommend2.setChart();
+            this.$refs.training.setTrain();
+            this.$refs.article1.setDeviceSafe();
             for (let i = 1; i < 9; i++) {
-               this.$refs['chart' + i].setChart()
-
+                this.$refs["chart" + i].setChart();
             }
-           this.$refs.chinaMap.setMap();
-           this.$refs.hotWords.setChart();
-
-        }, 500)
-        window.addEventListener('resize', this.resizeFn)
+            this.$refs.sourceMap.setMap();
+        }, 500);
+        window.addEventListener("resize", this.resizeFn);
     },
     beforeDestroy() {
-        window.removeEventListener('resize', this.resizeFn)
-    }
-}
+        window.removeEventListener("resize", this.resizeFn);
+    },
+};
 </script>
 
 <style lang="less" scoped>
-
 .data-col {
     display: flex;
 }
@@ -848,8 +518,7 @@ export default {
     }
 
     .right-2 {
-       height: 50%;;
-
+        height: 50%;
     }
 }
 </style>

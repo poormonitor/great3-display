@@ -1,73 +1,85 @@
 <template>
     <div class="webPie">
         <div class="webPie-title">
-            <span class="subtitle"><span class="leftCircle"
-                                         :style="{background:data.color}"></span>{{ data.title }}<span
-                class="rightCircle" :style="{background:data.color}"></span></span>
+            <span class="subtitle"
+                ><span
+                    class="leftCircle"
+                    :style="{ background: data.color }"
+                ></span
+                >{{ data.title
+                }}<span
+                    class="rightCircle"
+                    :style="{ background: data.color }"
+                ></span
+            ></span>
         </div>
-        <div class="webPie-content" :id="id">
-
-        </div>
+        <div class="webPie-content" :id="id"></div>
     </div>
 </template>
 
 <script>
 export default {
-    name: '',
+    name: "",
     props: {
         id: String,
-        data: Object
+        data: Object,
     },
     data() {
         return {
-            myChart: null
-        }
+            myChart: null,
+        };
     },
     methods: {
         setChart() {
             let option = {
                 tooltip: {
-                    trigger: 'item',
-                    backgroundColor: '#11367a',
+                    trigger: "item",
+                    backgroundColor: "#11367a",
                     textStyle: {
-                        color: '#6dd0e3',
-                        fontSize: 10
+                        color: "#6dd0e3",
+                        fontSize: 10,
                     },
-                    formatter: "{b}:{d}%"
+                    formatter: "{b}:{d}%",
                 },
                 series: [
                     {
-                        type: 'pie',
-                        radius: '70%',
-                        center: ['50%', '50%'],
+                        type: "pie",
+                        radius: "70%",
+                        center: ["50%", "50%"],
                         label: {
-                            color: '#75deef',
+                            color: "#75deef",
                             fontSize: 8,
                             formatter: function (data) {
-                                return data.data.name + ' ' + (data.percent).toFixed(0) + '%';
-                            }
+                                return (
+                                    data.data.name +
+                                    " " +
+                                    data.percent.toFixed(0) +
+                                    "%"
+                                );
+                            },
                         },
                         labelLine: {
                             length: 10,
                             length2: 8,
                             lineStyle: {
-                                color: 'rgb(57,63,90)'
-                            }
+                                color: "rgb(57,63,90)",
+                            },
                         },
                         data: this.data.data,
-                    }
-                ]
+                    },
+                ],
             };
-            if (!this.myChart) this.myChart = this.$echarts(document.getElementById(this.id));
+            if (!this.myChart)
+                this.myChart = this.$echarts(document.getElementById(this.id));
             this.myChart.clear();
             this.myChart.resize();
             this.myChart.setOption(option);
-        }
+        },
     },
     mounted() {
-        this.setChart()
+        this.setChart();
     },
-}
+};
 </script>
 
 <style lang="less" scoped>
@@ -80,7 +92,7 @@ export default {
         text-align: center;
 
         .subtitle {
-            color: #68C6D6;
+            color: #68c6d6;
             position: relative;
             font-size: 12px;
 
@@ -107,7 +119,7 @@ export default {
     }
 
     .webPie-content {
-        height: 80%
+        height: 80%;
     }
 }
 </style>
