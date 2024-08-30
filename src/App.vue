@@ -26,6 +26,7 @@ export default {
             }
         }, 200);
         window.addEventListener("resize", this.resizeFn);
+        document.title = "四团三连学生信息智慧大屏";
     },
     beforeDestroy() {
         window.removeEventListener("resize", this.resizeFn);
